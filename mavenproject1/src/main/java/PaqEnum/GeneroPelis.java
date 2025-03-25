@@ -9,5 +9,5 @@ package PaqEnum;
  * @author ÁLVARO
  */
 public class GeneroPelis {
- 
+ public GeneroPelis(){}
 }
