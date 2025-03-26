@@ -4,10 +4,18 @@
  */
 package paquete_Subclases;
 
+import Paquete_Clases.Producto;
+
 /**
  *
  * @author ÁLVARO
  */
-public class juego {
+public class juego extends Producto{
     
+    
+  public double getPrecio()
+{
+return 1;
+
+}  
 }

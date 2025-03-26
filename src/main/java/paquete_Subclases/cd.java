@@ -4,10 +4,17 @@
  */
 package paquete_Subclases;
 
+import Paquete_Clases.Producto;
+
 /**
  *
  * @author ÁLVARO
  */
-public class cd {
-    
+public class cd extends Producto{
+ 
+    public double getPrecio()
+{
+return 1;
+
+}
 }
