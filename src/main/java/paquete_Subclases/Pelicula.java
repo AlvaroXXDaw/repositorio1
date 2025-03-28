@@ -102,51 +102,28 @@ return 2;
          {
              System.out.println("esta retirada");    
          }
-        else if (this.isVendido()) 
-         {
-             System.out.println("Esta vendido");
-         }else 
+       else 
         { this.alquilado=true;}
      }
-     
-     
-     
-public void vender(int Pre)
-{
 
-    if (!(this.isAlquilado()&& this.isRetirado() && this.isVendido())) 
-    {
-    
-        this.Precio=Pre;
-        contPeliculas--;
-        Producto.contProductos--;
-    } 
-    else 
-    { if (this.isAlquilado()) 
-    {
-         System.out.println("La película no puede ser vendida porque ya está alquilada, retirada o vendida.");
-        
-    }
-    
-    } 
-    
-}
     @Override
-    public void retirar() {
-        
-         if (this.isVendido()) {
-            System.out.println("No se puede retirar la película porque está vendida.");
-        } else {
-            super.retirar();
-            contPeliculas--;
+    public void vender(int precio) {
+        if (!this.vendido) 
+        {
+        this.vendido=true;
+        contPeliculas--;
         }
-    
+ // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
- public boolean isVendido()
- {
- return this.vendido;
- }
-    
+
+    @Override
+    public boolean isVendido() {
+        return this.vendido; 
+    }
+     
+     
+     
+  
     
     public enum Idiomas {
     ESPAÑOL, INGLES, FRANCES, ALEMAN

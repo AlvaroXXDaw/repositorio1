@@ -16,15 +16,29 @@ public abstract class Producto implements Alquilable,Retirable{
     public String Nombre;
     public double Precio;
     public static int contProductos=0;
-    public boolean alquilado;
-    public boolean retirado;
+    public static int numProductos=0;
+    public boolean alquilado=false;
+    public boolean retirado=false;
+
+    public Producto() 
+    {
+        this.Nombre="";
+        this.id=12;
+                this.retirado=false;
+                this.alquilado=false;
+                        this.Precio=0;
+        
+    }
+    
     
     public Producto(String nombre)
     {
     contProductos++;
+    numProductos++;
     this.Precio=0;
     this.id=contProductos;
-    
+    this.retirado=true;
+    this.alquilado=false;
     }
 
     public Producto(int id, String Nombre, double Precio, boolean alquilado, boolean retirado) {
@@ -33,6 +47,8 @@ public abstract class Producto implements Alquilable,Retirable{
         this.Precio = Precio;
         this.alquilado = alquilado;
         this.retirado = retirado;
+          contProductos++;
+    numProductos++;
     }
     
        
@@ -42,6 +58,7 @@ public abstract class Producto implements Alquilable,Retirable{
     }
     
     public abstract double getPrecio();
+    
     
     public int getId()
     {
